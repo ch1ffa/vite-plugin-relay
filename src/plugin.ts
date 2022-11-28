@@ -5,12 +5,14 @@ export default {
   name: "vite:relay",
   transform(src, id) {
     let code = src;
+    let map = null;
 
     if (/.(t|j)sx?/.test(id) && src.includes("graphql`")) {
       const out = transformSync(src, {
         plugins: [["babel-plugin-relay"]],
         code: true,
         filename: id,
+        sourceMaps: true,
       });
 
       if (!out?.code) {
@@ -18,11 +20,12 @@ export default {
       }
 
       code = out.code;
+      map = out.map;
     }
 
     return {
       code,
-      map: null,
+      map,
     };
   },
 } as PluginOption;

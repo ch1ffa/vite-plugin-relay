@@ -1,10 +1,10 @@
 {
-  "name": "vite-plugin-relay",
-  "version": "2.0.0",
+  "name": "@ch1ffa/vite-plugin-relay",
+  "version": "2.1.0",
   "description": "A vite plugin for relay",
   "author": {
-    "name": "Oscar Beaumont",
-    "email": "oscar@otbeaumont.me"
+    "name": "Vadim Evseev",
+    "email": "chiffa117@gmail.com"
   },
   "license": "MIT",
   "repository": {
